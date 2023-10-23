@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="320.0" style="-fx-background-color: #854240;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.metronomeproject.HelloController">
+   <children>
+      <AnchorPane layoutX="20.0" layoutY="22.0" prefHeight="124.0" prefWidth="280.0" style="-fx-background-color: #633231;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <Label fx:id="currentBpmLabel" alignment="CENTER" layoutY="26.0" prefHeight="78.0" prefWidth="280.0" style="-fx-text-fill: #FFFFFF;" text="Label">
+               <font>
+                  <Font name="PT Sans" size="62.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button fx:id="defaultButton" layoutX="187.0" layoutY="327.0" mnemonicParsing="false" onAction="#onDefaultButtonClick" prefHeight="55.0" prefWidth="113.0" style="-fx-background-color: #633231;" text="Default" textFill="WHITE">
+         <font>
+            <Font name="PT Sans" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="playButton" layoutX="20.0" layoutY="327.0" mnemonicParsing="false" onAction="#onPlayButtonClick" prefHeight="55.0" prefWidth="113.0" style="-fx-background-color: #633231;" text="Play" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="39.0" layoutY="165.0" prefHeight="34.0" prefWidth="243.0" style="-fx-background-color: #633231;">
+         <children>
+            <Label layoutX="7.0" layoutY="9.0" prefHeight="17.0" prefWidth="66.0" text="Set Time:" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="9.0" text="/" textFill="WHITE" />
+            <ChoiceBox fx:id="bottomTimeSignatureChoiceBox" layoutX="132.0" layoutY="3.0" prefHeight="26.0" prefWidth="45.0" />
+            <ChoiceBox fx:id="topTimeSignatureChoiceBox" layoutX="69.0" layoutY="3.0" prefHeight="26.0" prefWidth="45.0" />
+            <Button fx:id="setTimeButton" layoutX="190.0" layoutY="3.0" mnemonicParsing="false" onAction="#onSetTimeButtonClick" text="Set!">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="71.0" layoutY="211.0" prefHeight="34.0" prefWidth="178.0" style="-fx-background-color: #633231;">
+         <children>
+            <Label layoutX="5.0" layoutY="9.0" prefHeight="17.0" prefWidth="66.0" text=" Set BPM:" textFill="WHITE">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bpmField" alignment="CENTER" layoutX="71.0" layoutY="4.0" prefHeight="26.0" prefWidth="39.0">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="setBpmButton" layoutX="127.0" layoutY="3.0" mnemonicParsing="false" onAction="#onSetBpmButtonClick" text="Set!">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutX="29.0" layoutY="258.0" prefHeight="55.0" prefWidth="264.0" style="-fx-background-color: #633231;">
+         <left>
+            <Label prefHeight="17.0" prefWidth="84.0" text="   Sound Pack:" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Label>
+         </left>
+      </BorderPane>
+      <ChoiceBox fx:id="packChoiceBox" layoutX="121.0" layoutY="273.0" prefHeight="26.0" prefWidth="99.0" />
+      <Button fx:id="setSoundPackButton" layoutX="237.0" layoutY="272.0" mnemonicParsing="false" onAction="#onSetSoundPackButtonClick" text="Set!">
+         <font>
+            <Font name="PT Sans" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
